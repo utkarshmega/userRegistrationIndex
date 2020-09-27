@@ -22,7 +22,7 @@ public class userRegistration {
 		System.out.println("Enter Last name");
 		String lname = sc.next();
 		
-		//Pattern pattern1 = Pattern.compile("^[A-Z][a-z]{2,}");
+		Pattern pattern1 = Pattern.compile("^[A-Z][a-z]{2,}");
 		Matcher matcher1 = pattern.matcher(lname);
 		if(matcher1.matches())
 			System.out.println("Valid Last Name");
@@ -51,7 +51,7 @@ public class userRegistration {
 		
 		System.out.println("Enter Password");
 		String password = sc.next();
-		String pass_pattern = "[^\\s]{8,}";
+		String pass_pattern = "(?=.*[A-Z])[^\\s]{8,}";
 		Pattern pattern4 = Pattern.compile(pass_pattern);
 		Matcher matcher4 = pattern4.matcher(password);
 		if(matcher4.matches())
