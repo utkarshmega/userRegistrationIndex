@@ -19,6 +19,15 @@ public class userRegistration {
 		else
 			System.out.println("Invalid First Name");
 		
+		System.out.println("Enter Last name");
+		String lname = sc.next();
+		
+		//Pattern pattern1 = Pattern.compile("^[A-Z][a-z]{2,}");
+		Matcher matcher1 = pattern.matcher(lname);
+		if(matcher1.matches())
+			System.out.println("Valid Last Name");
+		else
+			System.out.println("Invalid Last Name");
 		
 		sc.close();
 
