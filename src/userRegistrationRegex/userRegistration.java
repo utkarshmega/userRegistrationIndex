@@ -49,6 +49,16 @@ public class userRegistration {
 		else
 			System.out.println("Invalid Phone Number");
 		
+		System.out.println("Enter Password");
+		String password = sc.next();
+		String pass_pattern = "[^\\s]{8,}";
+		Pattern pattern4 = Pattern.compile(pass_pattern);
+		Matcher matcher4 = pattern4.matcher(password);
+		if(matcher4.matches())
+			System.out.println("Valid Password");
+		else
+			System.out.println("Invalid Password");
+		
 		sc.close();
 
 	}
