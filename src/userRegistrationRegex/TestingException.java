@@ -13,6 +13,7 @@ public class TestingException {
 		try {
 			String output1 = obj.validateFname("Utkarsh");
 			assertEquals("Valid First Name", output1 );
+			System.out.println("Valid First Name");
 		}
 		catch (userRegistrationException e){
 			System.out.println("e.getMessage");
@@ -25,6 +26,7 @@ public class TestingException {
 			try {
 				String output1 = obj.validateFname("utkarsh");
 				assertEquals("Valid First Name", output1 );
+				System.out.println("Valid First Name");
 			}
 			catch (userRegistrationException e){
 				System.out.println("e.getMessage");
@@ -37,6 +39,7 @@ public class TestingException {
 		try {
 			String output1 = obj.validateLname("Agrawal");
 			assertEquals("Valid Last Name", output1 );
+			System.out.println("Valid Last Name");
 		}
 		catch(userRegistrationException e)
 		{
@@ -50,6 +53,7 @@ public class TestingException {
 			try {
 				String output1 = obj.validateLname("agrawal");
 				assertEquals("Valid Last Name", output1 );
+				System.out.println("Valid Last Name");
 			}
 			catch(userRegistrationException e)
 			{
@@ -63,6 +67,7 @@ public class TestingException {
 		try {
 			String output1 = obj.validateEmail("abc@gmail.com");
 			assertEquals("Valid Email Address", output1 );
+			System.out.println("Valid Email");
 		}
 		catch(userRegistrationException e)
 		{
@@ -77,6 +82,7 @@ public class TestingException {
 		try {
 			String output1 = obj.validateEmail(".abc@gmail.com");
 			assertEquals("Valid Email Address", output1 );
+			System.out.println("Valid Email");
 		}
 		catch(userRegistrationException e)
 		{
@@ -91,6 +97,7 @@ public class TestingException {
 		try {
 			String output1 = obj.validatePhno("91 9044961252");
 			assertEquals("Valid Phone Number", output1 );
+			System.out.println("Valid Phone number");
 		}
 		catch(userRegistrationException e)
 		{
@@ -105,6 +112,7 @@ public class TestingException {
 			try {
 				String output1 = obj.validatePhno("044961252");
 				assertEquals("Valid Phone Number", output1 );
+				System.out.println("Valid Phone number");
 			}
 			catch(userRegistrationException e)
 			{
@@ -119,6 +127,7 @@ public class TestingException {
 		try {
 			String output1 = obj.validatePassword("la2Q@gnb");
 			assertEquals("Valid Password", output1 );
+			System.out.println("Valid Password");
 		}
 		catch(userRegistrationException e)
 		{
@@ -133,6 +142,7 @@ public class TestingException {
 			try {
 				String output1 = obj.validatePassword("la2Qgnb");
 				assertEquals("Valid Password", output1 );
+				System.out.println("Valid Password");
 			}
 			catch(userRegistrationException e)
 			{

@@ -6,45 +6,138 @@ import org.junit.Test;
 
 public class Testing {
 
+	//Happy Test Case
 	@Test
 	public void testFname() {
 		userRegistration obj = new userRegistration();
-		String output1 = obj.validateFname("Utkarsh");
-		String output2 = obj.validateFname("utka");
-		assertEquals("Valid First Name", output1 );
-		assertEquals("Invalid First Name", output2 );
+		try {
+			String output1 = obj.validateFname("Utkarsh");
+			assertEquals("Valid First Name", output1 );
+		}
+		catch (userRegistrationException e){
+			System.out.println("e.getMessage");
+		}
+		//Sad Test Case
+		@Test
+		public void testFname() {
+			userRegistration obj = new userRegistration();
+			try {
+				String output1 = obj.validateFname("utkarsh");
+				assertEquals("Valid First Name", output1 );
+			}
+			catch (userRegistrationException e){
+				System.out.println("e.getMessage");
+			}		
 	}
+	//happy test last name	
 	@Test
 	public void testLname() {
 		userRegistration obj = new userRegistration();
-		String output1 = obj.validateLname("Agrawal");
-		String output2 = obj.validateLname("agrawal");
-		assertEquals("Valid Last Name", output1 );
-		assertEquals("Invalid Last Name", output2 );
+		try {
+			String output1 = obj.validateLname("Agrawal");
+			assertEquals("Valid Last Name", output1 );
+		}
+		catch(userRegistrationException e)
+		{
+			System.out.println(e.getMessage());
+		}
 	}
+	//sad test last name	
+		@Test
+		public void testLname() {
+			userRegistration obj = new userRegistration();
+			try {
+				String output1 = obj.validateLname("agrawal");
+				assertEquals("Valid Last Name", output1 );
+			}
+			catch(userRegistrationException e)
+			{
+				System.out.println(e.getMessage());
+			}
+		}
+		//happy test case email
 	@Test
 	public void testEmail() {
 		userRegistration obj = new userRegistration();
-		String output1 = obj.validateEmail("abc@gmail.com");
-		String output2 = obj.validateEmail(".abc@gamil.com.com");
-		assertEquals("Valid Email Address", output1 );
-		assertEquals("Invalid Email Address", output2 );
+		try {
+			String output1 = obj.validateEmail("abc@gmail.com");
+			assertEquals("Valid Email Address", output1 );
+		}
+		catch(userRegistrationException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
 	}
+	//sad test case email
+	@Test
+	public void testEmail() {
+		userRegistration obj = new userRegistration();
+		try {
+			String output1 = obj.validateEmail(".abc@gmail.com");
+			assertEquals("Valid Email Address", output1 );
+		}
+		catch(userRegistrationException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	//happy test case phn no
 	@Test
 	public void testPhn() {
 		userRegistration obj = new userRegistration();
-		String output1 = obj.validatePhno("91 9044961252");
-		String output2 = obj.validatePhno("9044961252");
-		assertEquals("Valid Phone Number", output1 );
-		assertEquals("Invalid Phone Number", output2 );
+		try {
+			String output1 = obj.validatePhno("91 9044961252");
+			assertEquals("Valid Phone Number", output1 );
+		}
+		catch(userRegistrationException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
 	}
+	//sad test case phn no.
+		@Test
+		public void testPhn() {
+			userRegistration obj = new userRegistration();
+			try {
+				String output1 = obj.validatePhno("044961252");
+				assertEquals("Valid Phone Number", output1 );
+			}
+			catch(userRegistrationException e)
+			{
+				System.out.println(e.getMessage());
+			}
+			
+		}
+	//happy test case password	
 	@Test
 	public void testPassword() {
 		userRegistration obj = new userRegistration();
-		String output1 = obj.validatePassword("la2Q@gnb");
-		String output2 = obj.validatePassword("abcd");
-		assertEquals("Valid Password", output1 );
-		assertEquals("Invalid Password", output2 );
+		try {
+			String output1 = obj.validatePassword("la2Q@gnb");
+			assertEquals("Valid Password", output1 );
+		}
+		catch(userRegistrationException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
 	}
+	//sad test case password	
+		@Test
+		public void testPassword() {
+			userRegistration obj = new userRegistration();
+			try {
+				String output1 = obj.validatePassword("la2Qgnb");
+				assertEquals("Valid Password", output1 );
+			}
+			catch(userRegistrationException e)
+			{
+				System.out.println(e.getMessage());
+			}
+			
+		}
 
 }
