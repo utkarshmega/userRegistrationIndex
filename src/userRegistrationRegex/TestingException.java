@@ -16,7 +16,7 @@ public class TestingException {
 			System.out.println("Valid First Name");
 		}
 		catch (userRegistrationException e){
-			System.out.println("e.getMessage");
+			System.out.println(e.getMessage());
 		}
 	}
 		//Sad Test Case
@@ -29,7 +29,7 @@ public class TestingException {
 				System.out.println("Valid First Name");
 			}
 			catch (userRegistrationException e){
-				System.out.println("e.getMessage");
+				System.out.println(e.getMessage());
 			}		
 	}
 	//happy test last name	
